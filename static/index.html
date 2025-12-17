@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Dance Choreographer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="icon">💃</span>
+                <h1>AI Dance Choreographer</h1>
+            </div>
+            <p class="subtitle">Transform music into synchronized dance animations</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="card upload-section">
+                <h2>1. Upload Music</h2>
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-icon">🎵</div>
+                    <p class="upload-text">Drag & drop audio file here</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <p class="upload-formats">MP3, WAV, OGG • Max 30 seconds • Max 10MB</p>
+                    <input type="file" id="audioFile" accept="audio/*" hidden>
+                </div>
+                
+                <!-- Audio Info -->
+                <div class="audio-info" id="audioInfo" style="display: none;">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">File:</span>
+                            <span class="info-value" id="fileName"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Duration:</span>
+                            <span class="info-value" id="fileDuration"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">BPM:</span>
+                            <span class="info-value" id="fileBPM"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Style Selection -->
+            <section class="card style-section">
+                <h2>2. Select Dance Style (Optional)</h2>
+                <div class="style-grid">
+                    <button class="style-btn active" data-style="auto">
+                        <span class="style-icon">✨</span>
+                        <span class="style-name">Auto</span>
+                    </button>
+                    <button class="style-btn" data-style="hip-hop">
+                        <span class="style-icon">🎤</span>
+                        <span class="style-name">Hip-Hop</span>
+                    </button>
+                    <button class="style-btn" data-style="pop">
+                        <span class="style-icon">🎸</span>
+                        <span class="style-name">Pop</span>
+                    </button>
+                    <button class="style-btn" data-style="jazz">
+                        <span class="style-icon">🎷</span>
+                        <span class="style-name">Jazz</span>
+                    </button>
+                    <button class="style-btn" data-style="ballet">
+                        <span class="style-icon">🩰</span>
+                        <span class="style-name">Ballet</span>
+                    </button>
+                    <button class="style-btn" data-style="house">
+                        <span class="style-icon">🏠</span>
+                        <span class="style-name">House</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Generate Section -->
+            <section class="card generate-section">
+                <h2>3. Generate Dance</h2>
+                <button class="generate-btn" id="generateBtn" disabled>
+                    <span class="btn-icon">🎬</span>
+                    <span class="btn-text">Generate Choreography</span>
+                </button>
+                
+                <!-- Progress -->
+                <div class="progress-container" id="progressContainer" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text" id="progressText">Processing...</p>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="card results-section" id="resultsSection" style="display: none;">
+                <h2>4. Download Animation</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-icon">📊</div>
+                        <div class="result-info">
+                            <span class="result-label">Generated Frames:</span>
+                            <span class="result-value" id="resultFrames"></span>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">⏱️</div>
+                        <div class="result-info">
+                            <span class="result-label">Animation Duration:</span>
+                            <span class="result-value" id="resultDuration"></span>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">⚡</div>
+                        <div class="result-info">
+                            <span class="result-label">Generation Time:</span>
+                            <span class="result-value" id="resultTime"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-btns">
+                    <button class="download-btn primary" id="downloadBVH">
+                        <span>⬇️ Download BVH File</span>
+                    </button>
+                    <p class="download-info">
+                        Import the BVH file into Blender, Unity, or any 3D animation software to visualize the choreography
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by AI • MINT/FACT Model • AIST++ Dataset</p>
+            <p class="footer-note">MVP Version - CPU Optimized for 8GB RAM</p>
+        </footer>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

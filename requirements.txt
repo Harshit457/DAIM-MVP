@@ -1,0 +1,33 @@
+# AI Dance Choreography System - MVP
+# CPU-optimized for 8GB RAM systems
+# Compatible with Python 3.9, 3.10, 3.11, 3.12
+
+# Audio Processing
+librosa==0.10.1
+soundfile==0.12.1
+scipy==1.11.4
+setuptools>=65.0.0  # Required by librosa for pkg_resources
+
+# Data & Utilities
+numpy==1.26.3
+pandas==2.1.4
+
+# Web Framework (Flask - simpler than FastAPI)
+Flask==3.0.0
+Flask-CORS==4.0.0
+Werkzeug==3.0.1
+
+# Progress bars
+tqdm==4.66.1
+
+# Configuration
+python-dotenv==1.0.0
+
+# ============================================
+# OPTIONAL: Only needed for full MINT model
+# ============================================
+# Uncomment these if upgrading to full MINT/FACT model:
+# tensorflow==2.15.0  # Supports Python 3.9-3.11
+# tensorflow-graphics
+# h5py==3.10.0
+# trimesh==4.0.8

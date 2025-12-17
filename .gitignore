@@ -1,0 +1,101 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+*.dylib
+
+# Distribution / packaging
+.Python
+build/
+dist/
+downloads/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-wheel-metadata/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.hypothesis/
+coverage.xml
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+venv.bak/
+
+# Environment variables
+.env
+.env.*
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints
+
+# Node
+node_modules/
+
+# Static / build artifacts
+static/dist/
+
+# Project-specific generated files and outputs
+outputs/
+uploads/
+*.bvh
+
+# Model weights & large binaries
+models/*.pt
+models/*.pth
+models/*.ckpt
+models/*.onnx
+models/*.h5
+models/*.bin
+
+# Misc
+*.key
+*.pem
+*.crt
+
+# Local files you don't want to commit
+local_settings.py
+
+# End of .gitignore
