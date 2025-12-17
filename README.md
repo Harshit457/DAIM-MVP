@@ -341,4 +341,5 @@ For issues or questions:
 
 ---
 
-**Built with ❤️ using AI • Powered by MINT/FACT • MVP Version 1.0**
+**Built with ❤️  • MVP v1.0**
+

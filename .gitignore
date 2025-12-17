@@ -99,3 +99,5 @@ models/*.bin
 local_settings.py
 
 # End of .gitignore
+temp_auto_push.bat
+temp_interactive_push.bat
